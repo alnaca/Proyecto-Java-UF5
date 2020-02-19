@@ -12,4 +12,28 @@ public class Seguridad extends Subcontrata {
         this.num_equip=num_equip;
         this.linia=linia;
     }
+
+    public int getTip() {
+        return tip;
+    }
+
+    public void setTip(int tip) {
+        this.tip = tip;
+    }
+
+    public int getNum_equip() {
+        return num_equip;
+    }
+
+    public void setNum_equip(int num_equip) {
+        this.num_equip = num_equip;
+    }
+
+    public Linia getLinia() {
+        return linia;
+    }
+
+    public void setLinia(Linia linia) {
+        this.linia = linia;
+    }
 }

@@ -6,7 +6,8 @@ public class Mantenimiento extends Subcontrata {
     private boolean escaleras;
     private Linia linia;
 
-    public Mantenimiento(int id, boolean ascensores, boolean escaleras, Linia linia){
+    public Mantenimiento(int nombre, int id, boolean ascensores, boolean escaleras, Linia linia){
+        super(nombre);
         identificador=id;
         this.ascensores=ascensores;
         this.escaleras=escaleras;
