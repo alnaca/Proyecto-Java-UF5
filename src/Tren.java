@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Tren {
     private int identificadorTren;
+
     public Tren(int id){
         identificadorTren=id;
     }

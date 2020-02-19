@@ -1,10 +1,13 @@
 public class Linia {
     private String identificarorLinia;//l1,l2,l3, enum?
-    private Cotxera cotxera;//objeti cotxera de tipo Cotxera
 
-    public Linia (String id, Cotxera cotxera){
+    //------------POR REVISAR----------------
+    //private Cotxera cotxera;//objeti cotxera de tipo Cotxera
+    //----------------------------------------
+
+    public Linia (String id/*, Cotxera cotxera*/){
         identificarorLinia=id;
-        this.cotxera=cotxera;
+        //this.cotxera=cotxera;
     }
 
     public String getIdentificarorLinia() {
@@ -15,11 +18,11 @@ public class Linia {
         this.identificarorLinia = identificarorLinia;
     }
 
-    public Cotxera getCotxera() {
+    /*public Cotxera getCotxera() {
         return cotxera;
     }
 
     public void setCotxera(Cotxera cotxera) {
         this.cotxera = cotxera;
-    }
+    }*/
 }

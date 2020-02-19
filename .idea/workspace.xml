@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Falta por hablar si transformamos la clase Trabajador a interface">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Se ha creado la Interface Trabajador.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mantenimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mantenimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seguridad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seguridad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subcontrata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subcontrata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tmb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tmb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trabajador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trabajador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interficie1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cotxera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cotxera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Linia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +234,8 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Prueba commit desde intellij" />
     <MESSAGE value="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Falta por hablar si transformamos la clase Trabajador a interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Falta por hablar si transformamos la clase Trabajador a interface" />
+    <MESSAGE value="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Se ha creado la Interface Trabajador." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hecho constructores i getters and setters de las clases, añadido un main. &#10;Se ha creado la Interface Trabajador." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1095" y="465" key="com.intellij.ide.util.TipDialog" timestamp="1582050492479">
