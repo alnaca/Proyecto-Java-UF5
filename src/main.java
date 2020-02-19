@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) {
-        Tren t1= new Tren(1);
+        /*Tren t1= new Tren(1);
         Tren t2= new Tren(2);
         Tren t3= new Tren(3);
         Tren t4= new Tren(4);
@@ -16,7 +16,7 @@ public class main {
         trenes.add(t5);
         trenes.add(t6);
         Linia l1 = new Linia("l1");
-        Cotxera c1 = new Cotxera("c1",t1,l1);
+        Cotxera c1 = new Cotxera("c1",t1,l1);*/
 
     }
 }
