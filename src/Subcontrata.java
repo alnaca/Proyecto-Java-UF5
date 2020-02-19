@@ -1,17 +1,17 @@
 
 
-public class Subcontrata {
-    private int nombre;
+public class Subcontrata implements Trabajador {
+    private String nombre;
 
-    public Subcontrata(int nombre){
+    public Subcontrata(String nombre){
         this.nombre=nombre;
     }
 
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 }

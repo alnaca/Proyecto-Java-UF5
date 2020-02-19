@@ -1,4 +1,3 @@
-
-public class Trabajador {
+public interface Trabajador {
 
 }

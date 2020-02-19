@@ -1,6 +1,6 @@
 
 
-public class Tmb extends Trabajador {
+public class Tmb implements Trabajador {
     private int num_empleat;
     private Linia linia;
 
