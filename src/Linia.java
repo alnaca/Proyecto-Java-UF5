@@ -1,21 +1,21 @@
 public class Linia {
-    private String identificarorLinia;//l1,l2,l3, enum?
+    private String identificadorLinia;//l1,l2,l3, enum?
 
     //------------POR REVISAR----------------
     //private Cotxera cotxera;//objeti cotxera de tipo Cotxera
     //----------------------------------------
 
     public Linia (String id/*, Cotxera cotxera*/){
-        identificarorLinia=id;
+        identificadorLinia=id;
         //this.cotxera=cotxera;
     }
 
-    public String getIdentificarorLinia() {
-        return identificarorLinia;
+    public String getidentificadorLinia() {
+        return identificadorLinia;
     }
 
-    public void setIdentificarorLinia(String identificarorLinia) {
-        this.identificarorLinia = identificarorLinia;
+    public void setidentificadorLinia(String identificadorLinia) {
+        this.identificadorLinia = identificadorLinia;
     }
 
     /*public Cotxera getCotxera() {
