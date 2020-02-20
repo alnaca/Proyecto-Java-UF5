@@ -1,9 +1,9 @@
 public abstract class Treballador {
 
-    private String nom;
-    private String dni;
-    private int edat;
-    private Linia linia;
+    protected String nom;
+    protected String dni;
+    protected int edat;
+    protected Linia linia;
 
 
     public Treballador(String nom, String dni, int edat, Linia linia) {
@@ -12,7 +12,6 @@ public abstract class Treballador {
         this.edat = edat;
         this.linia = linia;
 
-        
     }
 
 

@@ -1,17 +1,17 @@
 
 
-public class Subcontrata {
-    private String nombre;
+public class Subcontrata extends Treballador implements IAssignarLinia {
 
-    public Subcontrata(String nombre){
-        this.nombre=nombre;
+    private String DataInici;
+
+    public Subcontrata(String nom, String dni, int edat, Linia linia, String DataInici){
+        super(nom, dni, edat, linia);
+        this.DataInici = DataInici;
+        
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    @Override
+    public void AssignarLinia(Linia linia) {
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }

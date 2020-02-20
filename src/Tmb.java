@@ -1,12 +1,11 @@
 
 
-public class Tmb {
+public class Tmb extends Treballador {
     private int num_empleat;
-    private Linia linia;
 
-    public Tmb(int num_empleat, Linia linia){
-        this.num_empleat=num_empleat;
-        this.linia=linia;
+    public Tmb(String nom, String dni, int edat, Linia linia, int num_empleat){
+        super(nom, dni, edat, linia);
+        this.num_empleat = num_empleat;
     }
 
     public int getNum_empleat() {
@@ -17,11 +16,5 @@ public class Tmb {
         this.num_empleat = num_empleat;
     }
 
-    public Linia getLinia() {
-        return linia;
-    }
 
-    public void setLinia(Linia linia) {
-        this.linia = linia;
-    }
 }
