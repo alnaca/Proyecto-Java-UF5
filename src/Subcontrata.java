@@ -1,6 +1,6 @@
 
 
-public class Subcontrata implements Trabajador {
+public class Subcontrata {
     private String nombre;
 
     public Subcontrata(String nombre){
