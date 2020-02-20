@@ -2,11 +2,11 @@ import java.util.HashSet;
 
 public class Estacio {
     private String nom;
-    private HashSet<Linia> linia;
+    //private HashSet<Linia> linia;
 
-    public Estacio(String nom, Linia linia){
+    public Estacio(String nom){
         this.nom=nom;
-        this.linia.add(linia);
+        //this.linia.add(linia);
     }
 
     public String getNom() {
@@ -17,11 +17,11 @@ public class Estacio {
         this.nom = nom;
     }
 
-    public HashSet<Linia> getLinia() {
+    /*public HashSet<Linia> getLinia() {
         return linia;
     }
 
     public void setLinia(HashSet<Linia> linia) {
         this.linia = linia;
-    }
+    }*/
 }

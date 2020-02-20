@@ -4,13 +4,13 @@ public class Cotxera {
     private String identificador;//c1,c2,c3,enum?
     //------------POR REVISAR------------
     //private ArrayList<Tren> trens;
-    private Linia linia;//Pasar linia a Cotxera, asi decimos que cotxera con ke trenes i en ke linia esta
+    //private Linia linia;//Pasar linia a Cotxera, asi decimos que cotxera con ke trenes i en ke linia esta
     //-----------------------------------
 
 
-    public Cotxera(String id, Linia linia){
+    public Cotxera(String id){
         identificador=id;
-        this.linia=linia;
+        //this.linia=linia;
     }
 
     public String getIdentificador() {
@@ -29,16 +29,6 @@ public class Cotxera {
     public void setTrens(ArrayList<Tren> trens) {
         this.trens = trens;
     }*/
-
-
-
-    public Linia getLinia() {
-        return linia;
-    }
-
-    public void setLinia(Linia linia) {
-        this.linia = linia;
-    }
 
     //-----------------------------------
 }

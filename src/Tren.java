@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class Tren {
     private int identificadorTren;
-    
     //------------POR REVISAR------------
     private Cotxera cotxera;
     private Linia linia;
