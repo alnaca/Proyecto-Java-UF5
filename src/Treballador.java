@@ -46,6 +46,7 @@ public abstract class Treballador {
         this.edat = edat;
     }
 
+
     public void setLinia(Linia linia) {
         this.linia = linia;
     }

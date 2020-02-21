@@ -36,10 +36,19 @@ public class Linia {
         return treballadors;
     }
 
+    public void afegirTreballador(Treballador treballador){
+        this.treballadors.add(treballador);
+    }
+    public void esborrarTreballador(Treballador treballador){
+        this.treballadors.remove(treballador);
+    }
+
+
+    /*
     public void setTreballadors(ArrayList<Treballador> treballadors) {
         this.treballadors = treballadors;
     }
-
+*/
     /*public Cotxera getCotxera() {
         return cotxera;
     }

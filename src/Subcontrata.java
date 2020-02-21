@@ -11,7 +11,9 @@ public class Subcontrata extends Treballador implements IAssignarLinia {
     }
 
     @Override
-    public void AssignarLinia(Linia linia) {
-
+    public void AssignarLinia(Linia liniaNova) {
+        this.linia.esborrarTreballador(this);
+        liniaNova.afegirTreballador(this);
+        this.linia = liniaNova;
     }
 }
