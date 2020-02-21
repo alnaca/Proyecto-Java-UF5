@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Estacio {
     private String nom;
@@ -8,6 +9,16 @@ public class Estacio {
         this.nom=nom;
         //this.linia.add(linia);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Estacio estacio = (Estacio) o;
+        if (this.nom == ((Estacio) o).getNom()) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return Objects.equals(nom, estacio.nom);
+    }
+
+
 
     public String getNom() {
         return nom;

@@ -1,8 +1,9 @@
 
 
-public class Subcontrata extends Treballador implements IAssignarLinia {
+public abstract class Subcontrata extends Treballador implements IAssignarLinia {
 
-    private String DataInici;
+    protected String DataInici;
+    protected ETorn torn;
 
     public Subcontrata(String nom, String dni, int edat, Linia linia, String DataInici){
         super(nom, dni, edat, linia);
@@ -16,4 +17,9 @@ public class Subcontrata extends Treballador implements IAssignarLinia {
         liniaNova.afegirTreballador(this);
         this.linia = liniaNova;
     }
+
+
+    public abstract void AssignarTorn(ETorn torn);
+
+
 }

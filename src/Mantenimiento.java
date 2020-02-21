@@ -4,14 +4,12 @@ public class Mantenimiento extends Subcontrata {
     private int identificador;
     private boolean ascensores;
     private boolean escaleras;
-    private Linia linia;
 
-    public Mantenimiento(String nombre, int id, boolean ascensores, boolean escaleras, Linia linia){
-        super(nombre);
+    public Mantenimiento(String nom, String dni, int edat, Linia linia, String DataInici, int id, boolean ascensores, boolean escaleras){
+        super(nom, dni, edat, linia, DataInici);
         identificador=id;
         this.ascensores=ascensores;
         this.escaleras=escaleras;
-        this.linia=linia;
     }
 
     public int getIdentificador() {
@@ -38,11 +36,8 @@ public class Mantenimiento extends Subcontrata {
         this.escaleras = escaleras;
     }
 
-    public Linia getLinia() {
-        return linia;
-    }
-
-    public void setLinia(Linia linia) {
-        this.linia = linia;
+    @Override
+    public void AssignarTorn(ETorn torn) {
+        this.torn = torn;
     }
 }

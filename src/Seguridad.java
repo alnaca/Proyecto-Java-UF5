@@ -1,16 +1,15 @@
 
 
 
-public class Seguridad extends Subcontrata {
+public class Seguridad extends Subcontrata implements Comparable<Seguridad>{
     private int tip;
     private int num_equip;//numero de linea + numero de equipo , ej linea 9 equipo 930
-    private Linia linia;
 
-    public Seguridad(String nombre, int tip, int num_equip, Linia linia){
-        super(nombre);
+
+    public Seguridad(String nom, String dni, int edat, Linia linia, String DataInici, int tip, int num_equip){
+        super(nom, dni, edat, linia, DataInici);
         this.tip=tip;
         this.num_equip=num_equip;
-        this.linia=linia;
     }
 
     public int getTip() {
@@ -29,11 +28,18 @@ public class Seguridad extends Subcontrata {
         this.num_equip = num_equip;
     }
 
-    public Linia getLinia() {
-        return linia;
+
+
+    @Override
+    public int compareTo(Seguridad ob) {
+        int resultado = 0;
+        if (this.tip > ob.tip) {resultado = 1;}
+        else if (this.tip < ob.tip) {resultado = -1;}
+        return resultado;
     }
 
-    public void setLinia(Linia linia) {
-        this.linia = linia;
+    @Override
+    public void AssignarTorn(ETorn torn) {
+        this.torn = torn;
     }
 }
