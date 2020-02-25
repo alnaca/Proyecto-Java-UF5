@@ -1,13 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class main {
     public static void main(String[] args) {
 
+        //IMPORTANTE MODIFICAR RUTA DEL FICHERO!!! (LINEA 386)
         String linea;
         String opcio;
         ArrayList<Tren> trenes = new ArrayList<>();
         ArrayList<Cotxera> cotxeras = new ArrayList<>();
-        TreeMap linias = new TreeMap();
+        HashMap<String, Linia> linias = new HashMap();
         HashSet<Estacio> estacions_l1 = new HashSet<>();
         HashSet<Estacio> estacions_l2 = new HashSet<>();
         HashSet<Estacio> estacions_l3 = new HashSet<>();
@@ -77,11 +80,11 @@ public class main {
         Linia l5 = new Linia("l5", estacions_l5);
 
         //Afegim les linies en un treemap
-        /*linias.entrySet(l1);
-        linias.keySet(l2);
-        linias.keySet(l3);
-        linias.keySet(l4);
-        linias.keySet(l5);*/
+        linias.put("l1",l1);
+        linias.put("l2",l2);
+        linias.put("l3",l3);
+        linias.put("l4",l4);
+        linias.put("l5",l5);
 
         //Creem les cotxeres de cada linea
         Cotxera c1 = new Cotxera("c1");
@@ -155,7 +158,8 @@ public class main {
             System.out.println("3. Veure quins trens hi ha en una cotxera");
             System.out.println("4. Afegir estacio");
             System.out.println("5. Canviar tren de linea");
-            System.out.println("6. Sortir");
+            System.out.println("6. Crear fitxer amb informacio de una linea");
+            System.out.println("7. Sortir");
             opcio=entrada.nextLine();
 
             switch (opcio){
@@ -349,7 +353,7 @@ public class main {
                     break;
 
                 case "5":
-                    /*int id_tren,num_tren=-1;
+                    int id_tren,num_tren=-1;
                     String linia_tren_String;
                     Linia linia_tren_Linia;
                     System.out.println("Indica el tren que vols canviar de linea");
@@ -360,21 +364,54 @@ public class main {
                         }
                     }
                     if (num_tren>-1) {
-                        System.out.println("El tren es troba en la linea" + trenes.get(num_tren).getLinia());
+                        System.out.println("El tren es troba en la linea " + trenes.get(num_tren).getLinia().getIdentificadorLinia());
                         System.out.println("En quina linea vols posar el tren?");
                         linia_tren_String=entrada.nextLine();
-                        for (int i=0; i<linias.size();i++){
-                            if (linias.)
-                        }
-                        trenes.get(num_tren).setLinia(linia_tren);
+                        linia_tren_String=entrada.nextLine();
+                        linia_tren_Linia = linias.get(linia_tren_String);
+                        trenes.get(num_tren).setLinia(linia_tren_Linia);
+                        System.out.println("El tren es troba en la inea "+trenes.get(num_tren).getLinia().getIdentificadorLinia());
                     }else{
                         System.out.println("El tren no existeix");
                     }
                     System.out.println("Vols sortir (S/N)");
-                    opcio = entrada.nextLine();*/
-                    System.out.println("UNDER CONSTRUCTION");
+                    opcio = entrada.nextLine();
+                    //System.out.println("UNDER CONSTRUCTION");
                     break;
+
                 case "6":
+                    System.out.println("Escull una linea (l1, l2, l3, l4, l5)");
+                    linea = entrada.nextLine();
+                    try {
+                        FileWriter f = new FileWriter("C:\\Users\\roger\\Documents\\GRADO SUPERIOR\\DAW2\\Programacio orientat a objectes (m03uf456)\\ESTELA\\UF5\\PROYECTO\\Linea.txt");
+                        f.write("ID Linia: "+linias.get(linea).getIdentificadorLinia());
+                        f.write("\nLes estacions de la linea son: ");
+                        Iterator<Estacio> it_linea = linias.get(linea).getEstacions().iterator();
+                        while (it_linea.hasNext()){
+                            f.write(it_linea.next().getNom()+", ");
+                        }
+                        f.write("\n Els treballadors de la linea son: ");
+                        for (int i=0;i<linias.get(linea).getTreballadors().size();i++) {
+                            f.write(linias.get(linea).getTreballadors().get(i).getNom() + ", ");
+                        }
+                        f.write("\n");
+                        f.write("Els trens de la linea son: ");
+                        for (int i=0; i<trenes.size();i++){
+                            if (trenes.get(i).getLinia().getIdentificadorLinia().equals(linea)){
+                                f.write(trenes.get(i).getIdentificadorTren()+", ");
+                            }
+                        }
+                        f.write("\n");
+                        f.close();
+                        System.out.println("Fitxer creat");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+                case "7":
                     System.out.println("Segur que vols sortir (S/N)");
                     opcio = entrada.nextLine();
                     break;
@@ -384,6 +421,6 @@ public class main {
                     break;
             }
 
-        }while (opcio=="n");
+        }while (opcio.equals("n"));
     }
 }
