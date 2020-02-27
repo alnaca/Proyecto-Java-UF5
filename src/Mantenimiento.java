@@ -5,9 +5,8 @@ public class Mantenimiento extends Subcontrata {
     private boolean ascensores;
     private boolean escaleras;
 
-    public Mantenimiento(String nom, String dni, int edat, Linia linia, String DataInici, int id, boolean ascensores, boolean escaleras){
+    public Mantenimiento(String nom, String dni, int edat, Linia linia, String DataInici, boolean ascensores, boolean escaleras){
         super(nom, dni, edat, linia, DataInici);
-        identificador=id;
         this.ascensores=ascensores;
         this.escaleras=escaleras;
     }

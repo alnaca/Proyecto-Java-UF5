@@ -19,6 +19,7 @@ public class main {
         LinkedList<HashSet> estacions = new LinkedList<>();
 
 
+
         //Creem les estacions
         Estacio e1 = new Estacio("Clot");//l1+l2
         Estacio e2 = new Estacio("Navas");//l1
@@ -138,9 +139,21 @@ public class main {
         trenes.add(t20);
 
 
+        Tmb tr1 = new Tmb("Marc","11111111M",30,l1,11);
+        Tmb tr2 = new Tmb("Quim","22222222M",20,l1,22);
+        Tmb tr3 = new Tmb("Joan","33333333M",50,l2,33);
+        Tmb tr4 = new Tmb("Manel","44444444M",38,l2,44);
+        Tmb tr5 = new Tmb("Lluis","55555555M",25,l1,55);
 
+        Seguridad se1 = new Seguridad("Albert","12121212M",31,l1,"11/02/2020",123);
+        Seguridad se2 = new Seguridad("Pepe","13131313M",42,l1,"12/02/2020",123);
+        Seguridad se3 = new Seguridad("Marcos","14141414M",22,l2,"13/02/2020",123);
+        Seguridad se4 = new Seguridad("Patricia","15151515M",54,l2,"14/02/2020",123);
 
-
+        Mantenimiento ma1 = new Mantenimiento("Lucia","78787878M",31,l1,"11/05/2015", true, true);
+        Mantenimiento ma2 = new Mantenimiento("Lucas","78787800M",50,l1,"18/05/2015", true, false);
+        Mantenimiento ma3 = new Mantenimiento("Otger","78787811M",36,l2,"15/05/2015", false, true);
+        Mantenimiento ma4 = new Mantenimiento("Carles","78787822M",22,l2,"13/05/2015", false, false);
 
 
 
@@ -159,7 +172,8 @@ public class main {
             System.out.println("4. Afegir estacio");
             System.out.println("5. Canviar tren de linea");
             System.out.println("6. Crear fitxer amb informacio de una linea");
-            System.out.println("7. Sortir");
+            System.out.println("7. Veure treballadors d'una linia ");
+            System.out.println("0. Sortir");
             opcio=entrada.nextLine();
 
             switch (opcio){
@@ -411,7 +425,38 @@ public class main {
                     opcio = entrada.nextLine();
                     break;
 
+
                 case "7":
+                    System.out.println("Escull una linea (l1, l2, l3, l4, l5)");
+                    linea = entrada.nextLine();
+                    switch (linea){
+                        case "l1":
+                            l1.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                            break;
+
+                        case "l2":
+                            l2.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                            break;
+
+                        case "l3":
+                            l3.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                            break;
+
+                        case "l4":
+                            l4.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                            break;
+
+                        case "l5":
+                            l5.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                            break;
+                    }
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+
+                case "0":
                     System.out.println("Segur que vols sortir (S/N)");
                     opcio = entrada.nextLine();
                     break;

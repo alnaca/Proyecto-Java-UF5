@@ -6,6 +6,7 @@ public class Tmb extends Treballador implements Cloneable {
     public Tmb(String nom, String dni, int edat, Linia linia, int num_empleat){
         super(nom, dni, edat, linia);
         this.num_empleat = num_empleat;
+        linia.afegirTreballador(this);
     }
 
     public Tmb clone() {

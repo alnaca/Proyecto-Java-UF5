@@ -6,10 +6,9 @@ public class Seguridad extends Subcontrata implements Comparable<Seguridad>{
     private int num_equip;//numero de linea + numero de equipo , ej linea 9 equipo 930
 
 
-    public Seguridad(String nom, String dni, int edat, Linia linia, String DataInici, int tip, int num_equip){
+    public Seguridad(String nom, String dni, int edat, Linia linia, String DataInici, int tip){
         super(nom, dni, edat, linia, DataInici);
         this.tip=tip;
-        this.num_equip=num_equip;
     }
 
     public int getTip() {
