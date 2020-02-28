@@ -37,8 +37,7 @@ public class Mantenimiento extends Subcontrata {
     }
 
     @Override
-    public Subcontrata clone() {
-
+    public Subcontrata clone() throws CloneNotSupportedException{
         Subcontrata clon = new Mantenimiento(this.nom, this.dni, this.edat, this.linia, this.DataInici,this.ascensores,this.escaleras);
         return clon;
     }

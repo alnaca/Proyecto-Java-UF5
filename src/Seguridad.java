@@ -27,7 +27,7 @@ public class Seguridad extends Subcontrata implements Comparable<Seguridad>{
     }
 
     @Override
-    public Subcontrata clone() {
+    public Subcontrata clone() throws CloneNotSupportedException {
 
         Subcontrata clon = new Seguridad(this.nom, this.dni, this.edat, this.linia, this.DataInici, this.tip);
         return clon;

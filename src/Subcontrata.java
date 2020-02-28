@@ -12,7 +12,7 @@ public abstract class Subcontrata extends Treballador implements IAssignarLinia,
         
     }
 
-    public abstract Subcontrata clone();
+    public abstract Subcontrata clone() throws CloneNotSupportedException;
 
     @Override
     public void AssignarLinia(Linia liniaNova) {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="commit  ultim: treballadors main i lambdas">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="commit  ultim: MAIN ACABANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mantenimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mantenimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Seguridad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seguridad.java" afterDir="false" />
@@ -229,17 +229,18 @@
     <MESSAGE value="Mejora del main, todavia hay que pulir detalles y acabar main" />
     <MESSAGE value="Mejora importante del main, todavia hay que pulir detalles y acabar main" />
     <MESSAGE value="commit  ultim: treballadors main i lambdas" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit  ultim: treballadors main i lambdas" />
+    <MESSAGE value="commit  ultim: MAIN ACABANT" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit  ultim: MAIN ACABANT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1582901689616">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582901689616" />
-    <state x="215" y="0" key="CommitChangelistDialog2" timestamp="1582831864371">
+    <state x="215" y="0" key="CommitChangelistDialog2" timestamp="1582905911463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="215" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582831864371" />
+    <state x="215" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582905911463" />
     <state width="1515" height="308" key="GridCell.Tab.0.bottom" timestamp="1582905408215">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -260,10 +261,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582900636469" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1582831878043">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1582905919220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582831878043" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582905919220" />
     <state x="876" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1582900300145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

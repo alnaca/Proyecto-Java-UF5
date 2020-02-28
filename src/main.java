@@ -564,16 +564,16 @@ public class main {
                     opcio = entrada.nextLine();
                     break;
 
-                case "12":
+                /*case "12":
                     System.out.println("Buscar estacions de transbordament a la linia 1:");
 
-                    //l1.getEstacions().forEach((e) -> if (e1.getNom().equals(e)));
+                    l1.getEstacions().forEach((e) -> if (e1.getNom().equals(e)));
 
 
                     System.out.println("Vols sortir (S/N)");
                     opcio = entrada.nextLine();
                     break;
-
+                */
 
                 case "0":
                     System.out.println("Segur que vols sortir (S/N)");
