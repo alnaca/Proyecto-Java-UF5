@@ -1,7 +1,6 @@
 
 
 public class Mantenimiento extends Subcontrata {
-    private int identificador;
     private boolean ascensores;
     private boolean escaleras;
 
@@ -9,14 +8,6 @@ public class Mantenimiento extends Subcontrata {
         super(nom, dni, edat, linia, DataInici);
         this.ascensores=ascensores;
         this.escaleras=escaleras;
-    }
-
-    public int getIdentificador() {
-        return identificador;
-    }
-
-    public void setIdentificador(int identificador) {
-        this.identificador = identificador;
     }
 
     public boolean isAscensores() {
@@ -35,8 +26,21 @@ public class Mantenimiento extends Subcontrata {
         this.escaleras = escaleras;
     }
 
+    public ETorn getTorn() {
+        return torn;
+    }
+
+
     @Override
     public void AssignarTorn(ETorn torn) {
         this.torn = torn;
     }
+
+    @Override
+    public Subcontrata clone() {
+
+        Subcontrata clon = new Mantenimiento(this.nom, this.dni, this.edat, this.linia, this.DataInici,this.ascensores,this.escaleras);
+        return clon;
+    }
+
 }

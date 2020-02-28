@@ -1,6 +1,6 @@
 
 
-public abstract class Subcontrata extends Treballador implements IAssignarLinia {
+public abstract class Subcontrata extends Treballador implements IAssignarLinia, Cloneable {
 
     protected String DataInici;
     protected ETorn torn;
@@ -11,6 +11,8 @@ public abstract class Subcontrata extends Treballador implements IAssignarLinia 
         linia.afegirTreballador(this);
         
     }
+
+    public abstract Subcontrata clone();
 
     @Override
     public void AssignarLinia(Linia liniaNova) {

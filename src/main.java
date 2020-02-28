@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class main {
+
     public static void main(String[] args) {
 
         //IMPORTANTE MODIFICAR RUTA DEL FICHERO!!! (LINEA 386)
@@ -146,17 +147,19 @@ public class main {
         Tmb tr5 = new Tmb("Lluis","55555555M",25,l1,55);
 
         Seguridad se1 = new Seguridad("Albert","12121212M",31,l1,"11/02/2020",123);
-        Seguridad se2 = new Seguridad("Pepe","13131313M",42,l1,"12/02/2020",123);
-        Seguridad se3 = new Seguridad("Marcos","14141414M",22,l2,"13/02/2020",123);
-        Seguridad se4 = new Seguridad("Patricia","15151515M",54,l2,"14/02/2020",123);
+        Seguridad se2 = new Seguridad("Pepe","13131313M",42,l1,"12/02/2020",234);
+        Seguridad se3 = new Seguridad("Marcos","14141414M",22,l2,"13/02/2020",456);
+        Seguridad se4 = new Seguridad("Patricia","15151515M",54,l2,"14/02/2020",567);
 
         Mantenimiento ma1 = new Mantenimiento("Lucia","78787878M",31,l1,"11/05/2015", true, true);
         Mantenimiento ma2 = new Mantenimiento("Lucas","78787800M",50,l1,"18/05/2015", true, false);
         Mantenimiento ma3 = new Mantenimiento("Otger","78787811M",36,l2,"15/05/2015", false, true);
         Mantenimiento ma4 = new Mantenimiento("Carles","78787822M",22,l2,"13/05/2015", false, false);
 
-
-
+        ma1.AssignarTorn(ETorn.MATI);
+        ma2.AssignarTorn(ETorn.MATI);
+        ma3.AssignarTorn(ETorn.MATI);
+        ma4.AssignarTorn(ETorn.MATI);
 
         System.out.println("Trenes dentro de cochera c1:");
 
@@ -173,6 +176,10 @@ public class main {
             System.out.println("5. Canviar tren de linea");
             System.out.println("6. Crear fitxer amb informacio de una linea");
             System.out.println("7. Veure treballadors d'una linia ");
+            System.out.println("8. Provar mètode clone");
+            System.out.println("9. Provar mètode compareTo");
+            System.out.println("10. Reassignar linia a treballador:");
+            System.out.println("11. Reassignar torn a treballador:");
             System.out.println("0. Sortir");
             opcio=entrada.nextLine();
 
@@ -397,7 +404,10 @@ public class main {
                     System.out.println("Escull una linea (l1, l2, l3, l4, l5)");
                     linea = entrada.nextLine();
                     try {
-                        FileWriter f = new FileWriter("C:\\Users\\roger\\Documents\\GRADO SUPERIOR\\DAW2\\Programacio orientat a objectes (m03uf456)\\ESTELA\\UF5\\PROYECTO\\Linea.txt");
+                        //Marc
+                        FileWriter f = new FileWriter("C:\\Users\\marcg\\IdeaProjects\\Proyecto-Java-UF5\\Linea.txt");
+                        //Roger
+                        //FileWriter f = new FileWriter("C:\\Users\\roger\\Documents\\GRADO SUPERIOR\\DAW2\\Programacio orientat a objectes (m03uf456)\\ESTELA\\UF5\\PROYECTO\\Linea.txt");
                         f.write("ID Linia: "+linias.get(linea).getIdentificadorLinia());
                         f.write("\nLes estacions de la linea son: ");
                         Iterator<Estacio> it_linea = linias.get(linea).getEstacions().iterator();
@@ -450,6 +460,115 @@ public class main {
                             l5.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
                             break;
                     }
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+
+                case "8":
+                    System.out.println("Clonant...");
+                    Tmb tr11 = (Tmb) tr1.clone();
+                    Tmb tr12 = (Tmb) tr2.clone();
+                    System.out.println("TREBALLADORS LINIA 1:");
+                    l1.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                    System.out.println("************************************************");
+                    tr11.setNom("CLONAT1");
+                    tr12.setNom("CLONAT2");
+                    System.out.println("TREBALLADORS LINIA 1 despres de canviar noms als clonats:");
+                    l1.getTreballadors().forEach((t) -> System.out.println(t.getNom()+" "+t.getClass()));
+                    System.out.println("************************************************");
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+                case "9":
+                    System.out.println("Comparar seguretat segons tip:");
+                    System.out.println("tip 1: "+ se1.getTip()+" "+se1.getNom());
+                    System.out.println("tip 2: "+ se2.getTip()+" "+se2.getNom());
+                    if (se1.compareTo(se2) < 0 ) {
+                        System.out.println(se2.getNom()+" amb tip: "+se2.getTip()+" es major");
+                    }else if (se1.compareTo(se2) > 0 ) {
+                        System.out.println(se1.getNom()+" amb tip: "+se1.getTip()+" es major");
+                    }else {
+                        System.out.println (se1.getNom()+" i "+se2.getNom()+" son iguals");
+                    }
+
+                    System.out.println("************************************************");
+
+                    System.out.println("Canviant tip a Pepe per 123 i comparant:");
+                    se2.setTip(123);
+                    System.out.println("tip 1: "+ se1.getTip()+" "+se1.getNom());
+                    System.out.println("tip 2: "+ se2.getTip()+" "+se2.getNom());
+                    if (se1.compareTo(se2) < 0 ) {
+                        System.out.println(se2.getNom()+" amb tip: "+se2.getTip()+" es major");
+                    }else if (se1.compareTo(se2) > 0 ) {
+                        System.out.println(se1.getNom()+" amb tip: "+se1.getTip()+" es major");
+                    }else {
+                        System.out.println (se1.getNom()+" i "+se2.getNom()+" son iguals");
+                    }
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+
+                case "10":
+                    System.out.println("Introduiu linia nova per a treballador: "+ma1.getNom());
+
+                    linea = entrada.nextLine();
+                    switch (linea){
+                        case "l1":
+                            ma1.AssignarLinia(l1);
+                            break;
+
+                        case "l2":
+                            ma1.AssignarLinia(l2);
+                            break;
+
+                        case "l3":
+                            ma1.AssignarLinia(l3);
+                            break;
+
+                        case "l4":
+                            ma1.AssignarLinia(l4);
+                            break;
+
+                        case "l5":
+                            ma1.AssignarLinia(l5);
+                            break;
+                    }
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+                case "11":
+                    System.out.println("treballador: "+ma1.getNom()+" torn: "+ma1.getTorn());
+                    System.out.println("treballador: "+ma2.getNom()+" torn: "+ma2.getTorn());
+                    System.out.println(" ");
+                    System.out.println("Assignant torn de TARDA per a treballador: "+ma1.getNom());
+                    ma1.AssignarTorn(ETorn.TARDA);
+                    System.out.println("treballador: "+ma1.getNom()+" torn: "+ma1.getTorn());
+                    System.out.println(" ");
+                    System.out.println("Assignant torn de NIT per a treballador: "+ma2.getNom());
+                    ma2.AssignarTorn(ETorn.NIT);
+                    System.out.println("treballador: "+ma2.getNom()+" torn: "+ma2.getTorn());
+                    System.out.println(" ");
+                    //System.out.println("Assignant torn de PATATA per a treballador: "+ma2.getNom());
+                    //ma2.AssignarTorn(PATATA);
+                    System.out.println(" ");
+
+                    System.out.println("Vols sortir (S/N)");
+                    opcio = entrada.nextLine();
+                    break;
+
+                case "12":
+                    System.out.println("Buscar estacions de transbordament a la linia 1:");
+
+                    //l1.getEstacions().forEach((e) -> if (e1.getNom().equals(e)));
+
 
                     System.out.println("Vols sortir (S/N)");
                     opcio = entrada.nextLine();
